@@ -1,0 +1,31 @@
+﻿@model WebAppAddPupil.Models.Student
+<h2>Добавить ученика</h2>
+
+<form asp-action="Add" method="post">
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" style="color:red;"></span>
+    </div>
+    <div>
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" />
+        <span asp-validation-for="Surname" style="color:red;"></span>
+    </div>
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age" style="color:red;"></span>
+    </div>
+    <div>
+        <label asp-for="Class"></label>
+        <input asp-for="Class" />
+    </div>
+    <button type="submit">Добавить</button>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

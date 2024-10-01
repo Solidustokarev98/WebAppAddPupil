@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebAppAddPupil.Models.Student>
+
+<h2>Список учеников</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+            <th>Класс</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Surname</td>
+                <td>@student.Age</td>
+                <td>@student.Class</td>
+            </tr>
+        }
+    </tbody>
+</table>
